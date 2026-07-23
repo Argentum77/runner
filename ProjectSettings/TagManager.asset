@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - SpawnObj
+  - player
   layers:
   - Default
   - TransparentFX

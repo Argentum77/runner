@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 96625101}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,13 +404,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466506876}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17927025, y: -0, z: -0, w: 0.9837999}
-  m_LocalPosition: {x: 3.0809288, y: 9.26, z: -10.96}
+  m_LocalRotation: {x: 0.27844775, y: -0, z: -0, w: 0.9604514}
+  m_LocalPosition: {x: 3.0809288, y: 9.674, z: -10.804}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 96625097}
-  m_LocalEulerAnglesHint: {x: 20.655, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 32.335, y: 0, z: 0}
 --- !u!114 &466506880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,35 +645,77 @@ PrefabInstance:
     - {fileID: 5806980023211812517, guid: 7aa9bb01fb0c2331bb918634b326ef01, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2123511742272454526, guid: 7aa9bb01fb0c2331bb918634b326ef01,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1597123108}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aa9bb01fb0c2331bb918634b326ef01, type: 3}
---- !u!1 &1597123107 stripped
+--- !u!1 &1942212813
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2123511742272454526, guid: 7aa9bb01fb0c2331bb918634b326ef01,
-    type: 3}
-  m_PrefabInstance: {fileID: 1597123106}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1597123108
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1942212815}
+  - component: {fileID: 1942212814}
+  - component: {fileID: 1942212816}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1942212814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1597123107}
+  m_GameObject: {fileID: 1942212813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab674bbd56c41905487b36d39ff879b6, type: 3}
+  m_Script: {fileID: 11500000, guid: f89fcdb7f59afb86098a8adbec06f173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pref: {fileID: 2123511742272454526, guid: 7aa9bb01fb0c2331bb918634b326ef01, type: 3}
-  spawnpoint: {fileID: 2094283864}
-  maxObjectsCount: 50
-  objectTag: Ground
-  destroyDistance: 5
+  roadPrefab: {fileID: 2123511742272454526, guid: 7aa9bb01fb0c2331bb918634b326ef01,
+    type: 3}
+  segmentLength: 10
+  segmentsAhead: 60
+  maxSegments: 80
+  showDebugInfo: 1
+--- !u!4 &1942212815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942212813}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1942212816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942212813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89fcdb7f59afb86098a8adbec06f173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roadPrefab: {fileID: 7720795120772353416, guid: b76645f56285971f7a925ee400304aba,
+    type: 3}
+  segmentLength: 10
+  segmentsAhead: 60
+  maxSegments: 80
+  showDebugInfo: 1
 --- !u!1 &2094283863
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,35 +819,8 @@ PrefabInstance:
     - {fileID: 3067621790571808198, guid: b76645f56285971f7a925ee400304aba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7720795120772353416, guid: b76645f56285971f7a925ee400304aba,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2339277194089270750}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b76645f56285971f7a925ee400304aba, type: 3}
---- !u!1 &2339277194089270749 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7720795120772353416, guid: b76645f56285971f7a925ee400304aba,
-    type: 3}
-  m_PrefabInstance: {fileID: 2339277194089270748}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2339277194089270750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2339277194089270749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab674bbd56c41905487b36d39ff879b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pref: {fileID: 7720795120772353416, guid: b76645f56285971f7a925ee400304aba, type: 3}
-  spawnpoint: {fileID: 2094283864}
-  maxObjectsCount: 50
-  objectTag: Ground
-  destroyDistance: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -815,3 +830,4 @@ SceneRoots:
   - {fileID: 2094283864}
   - {fileID: 1597123106}
   - {fileID: 2339277194089270748}
+  - {fileID: 1942212815}
