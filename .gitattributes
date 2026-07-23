@@ -1,0 +1,2 @@
+*.psd,*.png,*.jpg,*.jpeg,*.tga,*.tif,*.tiff,*.fbx,*.obj,*.blend,*.wav,*.mp3,*.ogg,*.mp4,*.mov,*.dll,*.unitypackage filter=lfs diff=lfs merge=lfs -text
+*.psd,*.png,*.jpg,*.jpeg,*.tga,*.fbx,*.obj,*.wav,*.mp3,*.ogg,*.dll,*.unitypackage filter=lfs diff=lfs merge=lfs -text
